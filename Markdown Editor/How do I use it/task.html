@@ -1,0 +1,42 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>Before we start implementing the project, we need to think about the functionality. Remember <a href="https://www.markdownguide.org/basic-syntax/" rel="noopener noreferrer nofollow" target="_blank">the Markdown Guide</a> from the previous stage? Let's go through it one more time and recall the basic features:</p>
+<ul>
+<li>plain — a normal text without any formatting</li>
+<li>bold/italic<em> — </em>self-explanatory</li>
+<li>inline-code — for example,  <code class="java"><span style="color: #000000;">python editor.py</span></code></li>
+<li>link — for example, <a href="https://google.com" rel="noopener noreferrer nofollow" target="_blank">google.com</a></li>
+<li>header — look at the header of this stage.</li>
+<li>unordered-list — this very list is an example of an unordered list</li>
+<li>ordered-list — a list with enumerated elements</li>
+<li>new-line — switches to the next line</li>
+</ul>
+<p>In this stage, you need to implement these features in your editor. Let's also add special commands to our tool:</p>
+<ul>
+<li><code class="java">!help</code> — prints available syntax commands.</li>
+<li><code class="java">!done</code> — saves the markdown and exits the app.</li>
+</ul>
+<p>Let's do it!</p>
+<h5 id="objectives">Objectives</h5>
+<p>Implement the help function (<code class="java">!help</code>) that will print available syntax commands, which we have indicated above, as well as the special commands. When called, it should print the following:</p>
+<pre><code class="language-no-highlight">Available formatters: plain bold italic header link inline-code ordered-list unordered-list new-line
+Special commands: !help !done</code></pre>
+<p>Implement the exit function (<code class="java">!done</code>) that exits the editor without saving.</p>
+<p>Ask a user for input: <code class="java">Choose a formatter:</code>.</p>
+<ul>
+<li>If the input contains one of the correct formatters (plain, bold, italic, etc.), ask for the input once again.</li>
+<li>If the input contains no formatters or unknown command is sent, print the following message and ask for input again: <code class="java">Unknown formatting type or command</code>.</li>
+<li>If the input contains <code class="java">!help</code>, print the list of available commands, as shown in the example below. If the input contains <code class="java">!done</code>, exit the editor without saving.</li>
+</ul>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; non-existing-formatter
+Unknown formatting type or command
+Choose a formatter: &gt; !help
+Available formatters: plain bold italic header link inline-code ordered-list unordered-list new-line
+Special commands: !help !done
+Choose a formatter: &gt; header
+Choose a formatter: &gt; ordered-list
+Choose a formatter: &gt; !done</code></pre>
+</div>

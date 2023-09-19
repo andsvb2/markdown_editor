@@ -1,0 +1,108 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>Congratulations! You've made it to the most interesting part of the project. Now we will try to implement the formatters that we have discussed before:</p>
+<ul>
+<li>plain</li>
+<li>bold/italic</li>
+<li>inline-code</li>
+<li>link</li>
+<li>header</li>
+<li>new-line</li>
+</ul>
+<p>We do not include ordered and unordered lists, for now. This also means that you should delete them from the list shown when a user asks for the <code class="java">!help</code> function. But we will get to them in the next stage!</p>
+<h5 id="objectives">Objectives</h5>
+<p>Implement a separate function for each of the formatters. It will keep your code structured. With functions, you will also be able to find and fix a bug with ease if something is wrong.</p>
+<p>The program should work in the following way:</p>
+<ol>
+<li>Ask a user to input a formatter.</li>
+<li>If the formatter doesn't exist, print the following error message: <code class="java">Unknown formatting type or command</code>.</li>
+<li>Ask a user to input a text that will be applied to the formatter: <code class="java">Text: &lt;user's input&gt;</code>.</li>
+<li>Save the text with the chosen formatter applied to it and print the markdown. Each time you should print out the whole text in markdown accumulated so far. </li>
+</ol>
+<p>Different formatters may require different inputs. You can find detailed examples in the Examples section below.</p>
+<ol>
+<li><strong>Headings</strong> require a <strong>level</strong> and a <strong>text</strong> to print. The level is a number from 1 to 6. If the input number is out of bounds, print the corresponding error: <code class="java">The level should be within the range of 1 to 6</code> and ask the user for input again. A heading should always be printed on a new line and automatically add a new line at the end:
+
+	<pre><code class="language-no-highlight">Choose a formatter: &gt; header
+Level: &gt; 4
+Text: Hello World!
+#### Hello World!
+
+</code></pre>
+</li>
+<li><strong>Plain</strong>, <strong>bold</strong>, <strong>italic</strong>, and <strong>inline-code</strong> formatters require only text input. They should <strong>not</strong> add an extra space or line break at the end and should add a new formatted text to the previously formatted one (you do <strong>not</strong> need to print the new formatted text on a new line).</li>
+<li>The <strong>new-line</strong> formatter does not require text input.</li>
+<li><strong>Link</strong> requires a <strong>label</strong> and a <strong>URL</strong>. This formatter should not add an extra space or line break at the end.
+	<pre><code class="language-no-highlight">Choose a formatter: &gt; link
+Label: &gt; Tutorial
+URL: &gt; https://www.markdownguide.org/basic-syntax/
+[Tutorial](https://www.markdownguide.org/basic-syntax/)</code></pre>
+</li>
+</ol>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1:</strong> <em>printing a heading.</em></p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; header
+Level: &gt; 10
+The level should be within the range of 1 to 6
+Level: &gt; 4
+Text: Hello World!
+#### Hello World!
+
+Choose a formatter: &gt; </code></pre>
+<p><strong>Example 2:</strong> <em>printing a heading after some other text; the heading is on a new line and another new line is added right after it.</em></p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; bold
+Text: &gt; Hello
+**Hello**
+Choose a formatter: &gt; header
+Level: &gt; 2
+Text: &gt; Hello World!
+**Hello**
+## Hello World!
+
+Choose a formatter: &gt;
+</code></pre>
+<p><strong>Example 3:</strong> <em>working with the plaintext , inline-code, and new-line formatters; mind that the new-line formatter does not require text input</em>.</p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; plain
+Text: &gt; raw text
+raw text
+Choose a formatter: &gt; inline-code
+Text: &gt; code.format()
+raw text`code.format()`
+Choose a formatter: &gt; new-line
+raw text`code.format()`
+
+Choose a formatter: &gt;</code></pre>
+<p><strong>Example 4:</strong> <em>working with the bold and link formatters</em>.</p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; bold
+Text: &gt; You can use the following link:
+**You can use the following link:**
+Choose a formatter: &gt; link
+Label: &gt; Tutorial
+URL: &gt; https://www.markdownguide.org/basic-syntax/
+**You can use the following link:**[Tutorial](https://www.markdownguide.org/basic-syntax/)
+Choose a formatter: &gt;</code></pre>
+<p><strong>Example 5</strong>:<em> working with the header<strong> </strong>formatter; it automatically adds a line break, that's why the next formatted text (the link) is printed on a new line.</em></p>
+<pre><code class="language-no-highlight">Choose a formatter: &gt; non-existing-formatter
+Unknown formatting type or command
+Choose a formatter: &gt; header
+Level: &gt; 4
+Text: &gt; Hello World!
+#### Hello World!
+
+Choose a formatter: &gt; plain
+Text: &gt; Some plain text
+#### Hello World!
+Some plain text
+Choose a formatter: &gt; new-line
+#### Hello World!
+Some plain text
+
+Choose a formatter: &gt; link
+Label: &gt; Tutorial
+URL: &gt; https://www.markdownguide.org/basic-syntax/
+#### Hello World!
+Some plain text
+[Tutorial](https://www.markdownguide.org/basic-syntax/)
+Choose a formatter: &gt; !done</code></pre>
+</div>

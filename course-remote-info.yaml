@@ -1,0 +1,122 @@
+hyperskill_project:
+  id: 162
+  ide_files: https://cogniterra.org/media/attachments/lesson/25375/additional_files.json
+  is_template_based: false
+  use_ide: true
+update_date: "Tue, 19 Sep 2023 17:30:49 UTC"
+stages:
+  - id: 839
+    step: 12313
+    is_completed: true
+  - id: 840
+    step: 12314
+    is_completed: true
+  - id: 841
+    step: 12315
+    is_completed: true
+  - id: 842
+    step: 12316
+    is_completed: true
+  - id: 843
+    step: 12317
+    is_completed: true
+topics:
+  0:
+    - title: Introduction to Python
+      theory_id: 5204
+    - title: Overview of the basic program
+      theory_id: 5208
+    - title: "PEP 8: Coding style conventions"
+      theory_id: 5879
+    - title: Comments
+      theory_id: 6081
+    - title: Markdown
+      theory_id: 13156
+    - title: Basic data types
+      theory_id: 5852
+  1:
+    - title: Multi-line programs
+      theory_id: 5233
+    - title: If statement
+      theory_id: 5953
+    - title: Else statement
+      theory_id: 5932
+    - title: For loop
+      theory_id: 6065
+    - title: While loop
+      theory_id: 5940
+    - title: Loop control statements
+      theory_id: 6302
+    - title: Elif statement
+      theory_id: 5926
+    - title: "Markdown: extended elements"
+      theory_id: 13239
+    - title: Variables
+      theory_id: 5859
+    - title: Invoking a function
+      theory_id: 5891
+    - title: Declaring a function
+      theory_id: 5900
+    - title: Boolean logic
+      theory_id: 6025
+    - title: Comparisons
+      theory_id: 5920
+    - title: List
+      theory_id: 5979
+  2:
+    - title: Intro to computational thinking
+      theory_id: 8742
+    - title: Components of computational thinking
+      theory_id: 8745
+    - title: Scopes
+      theory_id: 6322
+    - title: Indexes
+      theory_id: 6189
+    - title: Quotes and multi-line strings
+      theory_id: 5814
+    - title: String formatting
+      theory_id: 6037
+    - title: Arguments
+      theory_id: 7248
+    - title: Operations with list
+      theory_id: 6031
+    - title: Functional decomposition
+      theory_id: 9571
+  3:
+    - title: Immutability
+      theory_id: 7929
+    - title: Introduction to OOP
+      theory_id: 3614
+    - title: Map and filter
+      theory_id: 8122
+    - title: Identity testing
+      theory_id: 8077
+    - title: Objects in Python
+      theory_id: 9262
+    - title: Default arguments
+      theory_id: 10295
+    - title: List comprehension
+      theory_id: 6315
+    - title: Lambda functions
+      theory_id: 7092
+  4:
+    - title: Introduction to Operating systems
+      theory_id: 9704
+    - title: Command line overview
+      theory_id: 8977
+    - title: Working with file modes and permissions
+      theory_id: 13961
+    - title: Files
+      theory_id: 13025
+    - title: File types
+      theory_id: 13017
+    - title: Introduction to Linux
+      theory_id: 9526
+    - title: File modes and permissions
+      theory_id: 13953
+    - title: Files in Python
+      theory_id: 8691
+    - title: Reading files
+      theory_id: 8139
+    - title: Writing files
+      theory_id: 8334
